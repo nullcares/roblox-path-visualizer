@@ -13,7 +13,7 @@ end
 
 local function clear_drawings(drawings)
     for _, drawing in pairs(drawings) do
-        if drawing.ZIndex == nil then
+        if drawing.ZIndex == nil then -- i couldnt find any other way to identify drawing classes
             clear_drawings(drawing)
         else
             drawing:Remove()
